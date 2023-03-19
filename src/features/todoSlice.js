@@ -10,11 +10,11 @@ export const todoSlice = createSlice({
       state.push(action.payload);
     },
     deleteTodo(state, action) {
-      toast.error("deleted successfully");
+      toast.error("Todo Deleted Successfully", { position: "top-right" });
       return state.filter((todo, id) => id !== action.payload);
     },
     deleteAll() {
-      toast.error("delted successfully all");
+      toast.error("All Todo Deleted Successfully ", { position: "top-right" });
       return [];
     },
   },

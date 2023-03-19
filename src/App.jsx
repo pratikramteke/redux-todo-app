@@ -11,10 +11,10 @@ function App() {
   function clickHandle() {
     dispatch(addTodo(input));
     setInput("");
-    toast.success("added sucessfully");
+          toast.success("Todo Added Sucessfully", { position: "top-right" });
   }
   return (
-    <div className="flex flex-col items-center justify-center my-10">
+    <div className="flex flex-col items-center justify-center my-32">
       <Toaster />
       <div className="flex justify-between  w-80 border-x border-t border-black px-5">
         <input
