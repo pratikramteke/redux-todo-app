@@ -14,18 +14,18 @@ function App() {
           toast.success("Todo Added Sucessfully", { position: "top-right" });
   }
   return (
-    <div className="flex flex-col items-center justify-center my-32">
+    <div className="flex flex-col items-center justify-center my-32" >
       <Toaster />
       <div className="flex justify-between  w-80 border-x border-t border-black px-5">
         <input
-          className="border border-black my-5 p-1"
+          className="border border-black my-5 rounded-lg p-1"
           type="text"
           value={input}
           placeholder="Enter Task"
           onChange={(e) => setInput(e.target.value)}
         />
         <button
-          className="border mx-1 p-2 bg-blue-500 hover:bg-blue-600 my-4 hover:text-white"
+          className="border mx-1 p-2 bg-blue-500 hover:bg-blue-600 rounded-lg my-4 hover:text-white"
           disabled={input === ""}
           onClick={() => clickHandle()}
         >
@@ -37,7 +37,7 @@ function App() {
           <div className="flex justify-between  my-2 ">
             <div>{item}</div>
             <button
-              className="border-black text-black border p-2 bg-red-600 hover:bg-red-700 hover:text-white"
+              className="border-black text-black border p-2 bg-red-600 rounded-lg hover:bg-red-700 hover:text-white"
               onClick={() => dispatch(deleteTodo(index))}
             >
               DELETE
@@ -47,7 +47,7 @@ function App() {
       </div>
       {count.length !== 0 && (
         <button
-          className="border-black border my-1 py-3 w-80 text-black border p-2 bg-red-600 hover:bg-red-700 hover:text-white"
+          className="border-black border my-1 py-3 w-80 text-black border p-2 bg-red-600 hover:bg-red-700 hover:text-white rounded-lg"
           onClick={() => dispatch(deleteAll())}
         >
           DELETE ALL
